@@ -75,3 +75,10 @@ pieces with the reliable staples that customers consistently love.
 - `reviews.malloy` — all Malloy queries
 - `reviews_story.malloynb` — narrative notebook
 - `screenshots/` — query result screenshots
+
+## Reflection
+I set out to explore whether all fashion categories are created equal when it comes to customer satisfaction. I chose the Women's E-Commerce Clothing Reviews dataset from Kaggle because it felt directly relevant to my interest in fashion industry careers — and because I wanted to work with real consumer behavior data rather than just product listings. I also thought it would be interesting since it's an unnamed e-commerce brand.
+The technical side of this project was not too challenging, but the real issue I had was with embedding my files into my README. There were problems with the files not being found in the seperate "screenshots" folder, but through using Claude I was able to figure it out. 
+Once the data was running, the findings came quickly — and some of them genuinely surprised me. I assumed women's fashion satisfaction would be fairly uniform across categories. Instead I found that the Trend department consistently underperformed every other department in both average rating and recommendation rate. Bottoms and Intimates — the least glamorous categories — quietly led in customer satisfaction. I also assumed younger shoppers would be harder to please, but age turned out to be almost irrelevant. Satisfaction was entirely a category story, not a demographic one.
+Getting everything onto GitHub was its own challenge. I dealt with merge conflicts, upstream branch errors, broken image paths, and duplicate files from the earlier problems I had with the README file.
+If I were to do this again, I would also set up GitHub at the very beginning of the project rather than at the end, which would have made version control much smoother. Finally, I would love to go deeper into the review text itself using some form of sentiment analysis — the written reviews likely contain signals that the star ratings alone don't capture, and that could make for an even richer story.
