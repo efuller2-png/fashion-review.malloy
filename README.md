@@ -1,6 +1,5 @@
 # What Makes Women Happy (With Their Clothes)?
 ### A Malloy Data Analysis of 23,000 Women's Fashion Reviews
-
 I was curious whether all fashion categories are created equal — 
 do women feel the same way about their dresses as their tops? 
 Their jackets as their trend pieces? I used Malloy and DuckDB to 
@@ -20,7 +19,7 @@ Each review includes:
 - **Written review text**
 
 ## Finding 1: Tops Dominate, But Trend Disappoints
-![Department Ratings](screenshots/department_ratings.png)
+![Department Ratings](department_ratings.png)
 
 Tops account for nearly half of all reviews (10,468), making it 
 the most-reviewed category by far. But the most surprising finding 
@@ -29,7 +28,7 @@ was the Trend department — it had both the lowest average rating
 department. Every other department cleared 80% recommendation rate. 
 
 ## Finding 2: Recommendation Rates Tell a Clearer Story
-![Recommendation Rates](screenshots/recommendation_rates.png)
+![Recommendation Rates](recommendation_rates.png)
 
 When I converted the recommended flag into a percentage, the gap 
 became even clearer. Bottoms and Intimates lead at ~85%, while 
@@ -38,7 +37,7 @@ this is a signal worth paying attention to — trend-driven inventory
 may be generating more returns and disappointment than staple pieces.
 
 ## Finding 3: Age Doesn't Predict Satisfaction
-![Age vs Rating](screenshots/age_ratings.png)
+![Age vs Rating](age_ratings.png)
 
 I assumed younger shoppers would be harder to please. I was wrong. 
 Ratings stay remarkably consistent across all age groups, hovering 
@@ -68,4 +67,3 @@ pieces with the reliable staples that customers consistently love.
 - `reviews.csv` — cleaned dataset
 - `reviews.malloy` — all Malloy queries
 - `reviews_story.malloynb` — narrative notebook
-- `screenshots/` — query result screenshots for README
