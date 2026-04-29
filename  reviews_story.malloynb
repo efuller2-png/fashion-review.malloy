@@ -1,0 +1,42 @@
+>>>malloy
+source: reviews is duckdb.table('reviews.csv') extend {
+  measure: review_count is count()
+  measure: avg_rating is avg(Rating)
+}
+
+>>>markdown
+# What Makes Women Happy With Their Clothes?
+I started with a simple question: do all fashion categories satisfy customers equally? I assumed yes. I was wrong.
+
+>>>malloy
+run: reviews -> {
+  group_by: `Department Name`
+  aggregate: review_count, avg_rating
+  order_by: avg_rating desc
+}
+
+>>>markdown
+## The Trend Problem
+Trend items have the lowest rating of any department. But ratings alone don't tell the full story — I wanted to know whether customers were actually recommending these items to others.
+
+>>>malloy
+run: reviews -> {
+  group_by: `Department Name`
+  aggregate: recommended is avg(`Recommended IND`) * 100
+  order_by: recommended desc
+}
+
+>>>markdown
+## Does Age Change Anything?
+I wondered if younger shoppers were harder to please. Turns out age barely matters — satisfaction is about the category, not the customer.
+
+>>>malloy
+run: reviews -> {
+  group_by: Age
+  aggregate: review_count, avg_rating
+  order_by: Age asc
+}
+
+>>>markdown
+## What This Means
+Trend pieces disappoint. Staples deliver. For any retailer, this is a signal worth acting on.
